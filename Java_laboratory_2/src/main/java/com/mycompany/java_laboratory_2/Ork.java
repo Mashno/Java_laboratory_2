@@ -19,6 +19,7 @@ public class Ork {
     private int intelligence;
     private int health;
     private String tribe;
+    private String type;
     public Ork(){
         
     }
@@ -52,4 +53,16 @@ public class Ork {
     
     public String getTribe() { return tribe; }
     public void setTribe(String tribe) { this.tribe = tribe; }
+    public void setType(String type) {
+        this.type = type;
+    }
+    
+    public String getType() {
+        return type;
+    }
+    
+    @Override
+    public String toString() {
+        return name + " (" + type + ")";
+    }
 }

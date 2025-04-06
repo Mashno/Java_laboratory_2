@@ -14,6 +14,7 @@ public class OrcDirector {
         builder.buildWeapon();
         builder.buildArmor();
         builder.buildStats();
+        builder.getOrk().setType("Базовый");
     }
 
     public void constructLeaderOrk(OrkBuilder builder) {
@@ -23,6 +24,7 @@ public class OrcDirector {
         builder.buildBanner();
         builder.buildAdditionalItem();
         builder.buildStats();
+        builder.getOrk().setType("Командир");
     }
 
     public void constructScoutOrk(OrkBuilder builder) {
@@ -31,5 +33,6 @@ public class OrcDirector {
         builder.buildArmor();
         builder.buildAdditionalItem();
         builder.buildStats();
+        builder.getOrk().setType("Разведчик");
     }
 }

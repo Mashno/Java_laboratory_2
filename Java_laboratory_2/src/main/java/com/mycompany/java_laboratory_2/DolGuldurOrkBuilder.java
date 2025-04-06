@@ -19,6 +19,28 @@ public class DolGuldurOrkBuilder extends OrkBuilder {
         ork.setWeapon(gearFactory.createWeapon());
     }
 
-    // Остальные методы аналогично MordorOrkBuilder
-    // с соответствующими характеристиками для Dol Guldur
+    @Override
+    public void buildArmor() {
+        ork.setArmor(gearFactory.createArmor());
+    }
+
+    @Override
+    public void buildBanner() {
+        ork.setBanner(gearFactory.createBanner());
+    }
+
+    @Override
+    public void buildAdditionalItem() {
+        ork.setAdditionalItem("Черный посох");
+    }
+
+    @Override
+    public void buildStats() {
+        // Сбалансированные характеристики
+        ork.setStrength((int)(Math.random() * 85 + 15));
+        ork.setAgility((int)(Math.random() * 85 + 15));
+        ork.setIntelligence((int)(Math.random() * 50));
+        ork.setHealth((int)(Math.random() * 150 + 50));
+        ork.setTribe("Дол Гулдур");
+    }
 }

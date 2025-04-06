@@ -11,6 +11,6 @@ package com.mycompany.java_laboratory_2;
 public class Java_laboratory_2 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        new OrcArmyGUI ().setVisible(true);
     }
 }
