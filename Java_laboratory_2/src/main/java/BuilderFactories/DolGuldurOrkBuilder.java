@@ -2,10 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.java_laboratory_2;
+package BuilderFactories;
 
 import AdditionalItems.Horn;
 import Weapons.Bow;
+import GearFactories.DolGuldurGearFactory;
+import GearFactories.OrcGearFactory;
+import com.mycompany.java_laboratory_2.OrkBuilder;
 
 
 
@@ -13,12 +16,12 @@ import Weapons.Bow;
  *
  * @author Владислав
  */
-public class MistyMountainsOrkBuilder extends OrkBuilder {
-    private OrcGearFactory gearFactory = new MistyMountainsGearFactory();
+public class DolGuldurOrkBuilder extends OrkBuilder {
+    private OrcGearFactory gearFactory = new DolGuldurGearFactory();
 
     @Override
     protected String getTribeSuffix() {
-        return "-гор";
+        return "-дур";
     }
 
     @Override
@@ -57,11 +60,11 @@ public class MistyMountainsOrkBuilder extends OrkBuilder {
 
     @Override
     public void buildStats() {
-        // Высокая ловкость (+30%), низкий интеллект
-        ork.setStrength((int)(Math.random() * 70 + 30));
-        ork.setAgility((int)(Math.random() * 100 + 30));
-        ork.setIntelligence((int)(Math.random() * 30));
+        // Сбалансированные характеристики
+        ork.setStrength((int)(Math.random() * 85 + 15));
+        ork.setAgility((int)(Math.random() * 85 + 15));
+        ork.setIntelligence((int)(Math.random() * 50));
         ork.setHealth((int)(Math.random() * 150 + 50));
-        ork.setTribe("Мглистые Горы");
+        ork.setTribe("Дол Гулдур");
     }
 }
