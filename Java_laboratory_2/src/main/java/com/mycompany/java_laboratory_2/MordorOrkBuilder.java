@@ -12,11 +12,19 @@ public class MordorOrkBuilder extends OrkBuilder {
     private OrcGearFactory gearFactory = new MordorGearFactory();
 
     @Override
-    protected String getTribeSuffix() { return "-мор"; }
+    protected String getTribeSuffix() {
+        return "-мор";
+    }
+
+    @Override
+    public void generateName() {
+        String baseName = faker.lordOfTheRings().character();
+        ork.setName(baseName + getTribeSuffix());
+    }
 
     @Override
     public void buildWeapon() {
-        ork.setWeapon(gearFactory.createWeapon());
+        ork.setWeapon("Разведчик".equals(ork.getType()) ? new Bow() : gearFactory.createWeapon());
     }
 
     @Override
@@ -26,17 +34,21 @@ public class MordorOrkBuilder extends OrkBuilder {
 
     @Override
     public void buildBanner() {
-        ork.setBanner(gearFactory.createBanner());
+        ork.setBanner("Командир".equals(ork.getType()) ? gearFactory.createBanner() : null);
     }
 
     @Override
     public void buildAdditionalItem() {
-        ork.setAdditionalItem(null);
+        if ("Командир".equals(ork.getType())) {
+            ork.setAdditionalItem(new Horn());
+        } else {
+            ork.setAdditionalItem(null);
+        }
     }
 
     @Override
     public void buildStats() {
-        ork.setStrength((int)(Math.random() * 70 + 30)); // +30%
+        ork.setStrength((int)(Math.random() * 70 + 30)); // +30% к силе
         ork.setAgility((int)(Math.random() * 100));
         ork.setIntelligence((int)(Math.random() * 50));
         ork.setHealth((int)(Math.random() * 150 + 50));

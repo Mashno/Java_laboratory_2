@@ -10,13 +10,17 @@ package com.mycompany.java_laboratory_2;
  */
 public class MistyMountainsGearFactory implements OrcGearFactory {
     @Override
-    public String createWeapon() { return "Топор"; }
-    
+    public Weapon createWeapon() {
+        return new Axe();
+    }
+
     @Override
-    public String createArmor() { return "Кожаная броня"; }
-    
+    public Armor createArmor() {
+        return new LeatherArmor();
+    }
+
     @Override
-    public String createBanner() { 
-        return "Знамя с Луной"; 
+    public Banner createBanner() {
+        return new MoonBanner();
     }
 }

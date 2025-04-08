@@ -8,11 +8,9 @@ package com.mycompany.java_laboratory_2;
  *
  * @author Владислав
  */
-class MordorGearFactory implements OrcGearFactory {
+class Horn implements AdditionalItem {
     @Override
-    public Weapon createWeapon() { return new HeavySword(); }
-    @Override
-    public Armor createArmor() { return new SteelArmor(); }
-    @Override
-    public Banner createBanner() { return new RedEyeBanner(); }
+    public String getName() {
+        return "Горн";
+    }
 }

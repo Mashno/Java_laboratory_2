@@ -10,29 +10,30 @@ package com.mycompany.java_laboratory_2;
  */
 public class OrcDirector {
     public void constructBasicOrk(OrkBuilder builder) {
+        builder.getOrk().setType("Базовый");
         builder.generateName();
         builder.buildWeapon();
         builder.buildArmor();
         builder.buildStats();
-        builder.getOrk().setType("Базовый");
+        builder.buildAdditionalItem();
     }
 
     public void constructLeaderOrk(OrkBuilder builder) {
+        builder.getOrk().setType("Командир");
         builder.generateName();
         builder.buildWeapon();
         builder.buildArmor();
         builder.buildBanner();
-        builder.buildAdditionalItem();
         builder.buildStats();
-        builder.getOrk().setType("Командир");
+        builder.buildAdditionalItem();
     }
 
     public void constructScoutOrk(OrkBuilder builder) {
+        builder.getOrk().setType("Разведчик");
         builder.generateName();
         builder.buildWeapon();
         builder.buildArmor();
-        builder.buildAdditionalItem();
         builder.buildStats();
-        builder.getOrk().setType("Разведчик");
+        builder.buildAdditionalItem();
     }
 }

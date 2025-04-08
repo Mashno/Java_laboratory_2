@@ -11,27 +11,19 @@ package com.mycompany.java_laboratory_2;
 import com.github.javafaker.Faker;
 
 public abstract class OrkBuilder {
-    protected Ork ork;
+    protected Ork ork = new Ork();
     protected Faker faker = new Faker();
 
-    public OrkBuilder() {
-        this.ork = new Ork();
-    }
+    public abstract void generateName();
+    public abstract void buildWeapon();
+    public abstract void buildArmor();
+    public abstract void buildBanner();
+    public abstract void buildAdditionalItem();
+    public abstract void buildStats();
 
     public Ork getOrk() {
         return ork;
     }
 
     protected abstract String getTribeSuffix();
-
-    public void generateName() {
-        String baseName = faker.lordOfTheRings().character();
-        ork.setName(baseName + getTribeSuffix());
-    }
-
-    public abstract void buildWeapon();
-    public abstract void buildArmor();
-    public abstract void buildBanner();
-    public abstract void buildAdditionalItem();
-    public abstract void buildStats();
 }

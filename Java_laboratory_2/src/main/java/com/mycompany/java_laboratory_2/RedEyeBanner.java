@@ -8,19 +8,9 @@ package com.mycompany.java_laboratory_2;
  *
  * @author Владислав
  */
-public class DolGuldurGearFactory implements OrcGearFactory {
+class RedEyeBanner implements Banner {
     @Override
-    public Weapon createWeapon() {
-        return new Spear();
-    }
-
-    @Override
-    public Armor createArmor() {
-        return new Chainmail();
-    }
-
-    @Override
-    public Banner createBanner() {
-        return new SpiderBanner();
+    public String getName() {
+        return "Знамя с Красным Оком";
     }
 }

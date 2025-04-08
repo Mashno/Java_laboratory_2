@@ -138,13 +138,13 @@ class OrcArmyGUI extends JFrame {
             infoPanel.add(Box.createVerticalStrut(10));
             
             // 2. Снаряжение
-            infoPanel.add(new JLabel("Оружие: " + ork.getWeapon()));
-            infoPanel.add(new JLabel("Броня: " + ork.getArmor()));
+            infoPanel.add(new JLabel("Оружие: " + ork.getWeapon().getName()));
+            infoPanel.add(new JLabel("Броня: " + ork.getArmor().getName()));
             if (ork.getBanner() != null) {
-                infoPanel.add(new JLabel("Знамя: " + ork.getBanner()));
+                infoPanel.add(new JLabel("Знамя: " + ork.getBanner().getName()));
             }
             if (ork.getAdditionalItem() != null) {
-                infoPanel.add(new JLabel("Доп. предмет: " + ork.getAdditionalItem()));
+                infoPanel.add(new JLabel("Доп. предмет: " + ork.getAdditionalItem().getName()));
             }
             infoPanel.add(Box.createVerticalStrut(10));
             

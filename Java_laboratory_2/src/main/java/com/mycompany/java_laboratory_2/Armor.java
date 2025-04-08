@@ -8,8 +8,6 @@ package com.mycompany.java_laboratory_2;
  *
  * @author Владислав
  */
-interface OrcGearFactory {
-    Weapon createWeapon();
-    Armor createArmor();
-    Banner createBanner();
+public interface Armor {
+    String getName();
 }

@@ -12,11 +12,23 @@ public class DolGuldurOrkBuilder extends OrkBuilder {
     private OrcGearFactory gearFactory = new DolGuldurGearFactory();
 
     @Override
-    protected String getTribeSuffix() { return "-дур"; }
+    protected String getTribeSuffix() {
+        return "-дур";
+    }
+
+    @Override
+    public void generateName() {
+        String baseName = faker.lordOfTheRings().character();
+        ork.setName(baseName + getTribeSuffix());
+    }
 
     @Override
     public void buildWeapon() {
-        ork.setWeapon(gearFactory.createWeapon());
+        if ("Разведчик".equals(ork.getType())) {
+            ork.setWeapon(new Bow());
+        } else {
+            ork.setWeapon(gearFactory.createWeapon());
+        }
     }
 
     @Override
@@ -26,12 +38,16 @@ public class DolGuldurOrkBuilder extends OrkBuilder {
 
     @Override
     public void buildBanner() {
-        ork.setBanner(gearFactory.createBanner());
+        ork.setBanner("Командир".equals(ork.getType()) ? gearFactory.createBanner() : null);
     }
 
     @Override
     public void buildAdditionalItem() {
-        ork.setAdditionalItem("Черный посох");
+        if ("Командир".equals(ork.getType())) {
+            ork.setAdditionalItem(new Horn());
+        } else {
+            ork.setAdditionalItem(null);
+        }
     }
 
     @Override
