@@ -4,6 +4,11 @@
  */
 package com.mycompany.java_laboratory_2;
 
+import AdditionalItems.AdditionalItem;
+import Armors.Armor;
+import Weapons.Weapon;
+import Banners.Banner;
+
 /**
  *
  * @author Владислав

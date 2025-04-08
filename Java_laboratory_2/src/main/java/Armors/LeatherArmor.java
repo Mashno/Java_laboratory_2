@@ -2,15 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.java_laboratory_2;
+package Armors;
+
+import Armors.Armor;
 
 /**
  *
  * @author Владислав
  */
-class Chainmail implements Armor {
+public class LeatherArmor implements Armor {
     @Override
     public String getName() {
-        return "Кольчуга";
+        return "Кожаная броня";
     }
 }

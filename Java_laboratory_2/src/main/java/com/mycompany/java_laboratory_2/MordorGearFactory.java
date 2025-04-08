@@ -4,6 +4,15 @@
  */
 package com.mycompany.java_laboratory_2;
 
+import Armors.SteelArmor;
+import Armors.Armor;
+import Weapons.HeavySword;
+import Weapons.Weapon;
+import Banners.RedEyeBanner;
+import Banners.Banner;
+
+
+
 /**
  *
  * @author Владислав

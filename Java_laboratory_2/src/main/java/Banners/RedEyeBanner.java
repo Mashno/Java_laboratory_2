@@ -2,15 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.java_laboratory_2;
+package Banners;
+
+import Banners.Banner;
 
 /**
  *
  * @author Владислав
  */
-class SpiderBanner implements Banner {
+public class RedEyeBanner implements Banner {
     @Override
     public String getName() {
-        return "Знамя с пауком";
+        return "Знамя с Красным Оком";
     }
 }

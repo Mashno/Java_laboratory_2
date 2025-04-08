@@ -4,6 +4,15 @@
  */
 package com.mycompany.java_laboratory_2;
 
+import Armors.Chainmail;
+import Armors.Armor;
+import Weapons.Spear;
+import Weapons.Weapon;
+import Banners.SpiderBanner;
+import Banners.Banner;
+
+
+
 /**
  *
  * @author Владислав
